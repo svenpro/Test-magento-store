@@ -353,15 +353,24 @@ ul.tabs {
 .search-wrapper {
   position: relative;
   margin-top: 35px; }
-  .search-wrapper:after {
-    content: "";
-    display: block;
+  .search-wrapper .button {
     position: absolute;
-    right: 15px;
-    top: 15px;
-    background: url("../images/sprite.png") -89px -72px;
-    height: 18px;
-    width: 18px; }
+    right: 0;
+    top: 0;
+    height: 40px;
+    width: 50px;
+    background-color: transparent; }
+    .search-wrapper .button:before {
+      content: "";
+      display: block;
+      position: absolute;
+      right: 15px;
+      top: 12px;
+      background: url("../images/sprite.png") -89px -72px;
+      height: 18px;
+      width: 18px; }
+    .search-wrapper .button:hover {
+      background-color: transparent; }
   .search-wrapper .search-field {
     border-radius: 22px;
     height: 45px;
@@ -514,10 +523,11 @@ ul {
     display: block;
     margin: 0 auto; }
 
-.mid-header #search {
+.mid-header #search_mini_form {
   position: relative;
   width: 30%;
-  padding: 0 2%; }
+  padding: 0 2%;
+  float: left; }
 
 .mid-header #call-back {
   height: 115px;
@@ -528,20 +538,29 @@ ul {
     margin-top: 40px; }
 
 .mid-header .action-buttons {
-  width: 25%; }
+  width: 25%;
+  position: relative; }
   .mid-header .action-buttons ul li {
     float: right;
     width: 25%;
     text-align: center; }
   .mid-header .action-buttons li a {
-    font-size: 12px; }
-  .mid-header .action-buttons li span {
-    margin-bottom: 15px;
+    font-size: 12px;
+    color: #777;
+    text-transform: initial;
+    width: 100%; }
+  .mid-header .action-buttons li .skip-link {
+    line-height: 19px; }
+  .mid-header .action-buttons .icon-wrapper .action-btn {
     display: block;
-    margin: 0 auto; }
+    margin: 0 auto 15px auto; }
+  .mid-header .action-buttons .icon-wrapper .shopping-cart {
+    margin-bottom: 10px; }
   .mid-header .action-buttons .icon-wrapper {
-    margin-top: 20px;
-    height: 30px; }
+    margin-top: 30px;
+    width: 100%;
+    height: 30px;
+    display: inline-block; }
   .mid-header .action-buttons .garage {
     background: url("../images/sprite.png") 0px -37px;
     height: 25px;

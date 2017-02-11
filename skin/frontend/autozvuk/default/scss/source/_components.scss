@@ -4,15 +4,26 @@
 .search-wrapper {
 	position: relative;
 	margin-top: 35px;		
-	&:after {
-		content: "";
-		display: block;
+	.button {
 		position: absolute;
-		right: 15px;
-		top: 15px;
-		background: url($search-image) $search-offset-x $search-offset-y;
-		height: $search-height;
-		width: $search-width;
+		right: 0;
+		top: 0;
+		height: 40px;
+		width: 50px;
+		background-color: transparent;
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			right: 15px;
+			top: 12px;
+			background: url($search-image) $search-offset-x $search-offset-y;
+			height: $search-height;
+			width: $search-width;
+		}
+		&:hover {
+			background-color: transparent;
+		}
 	}
 	.search-field {
 		border-radius: 22px;

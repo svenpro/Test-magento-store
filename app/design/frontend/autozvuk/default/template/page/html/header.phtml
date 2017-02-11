@@ -28,37 +28,37 @@
  */
 ?>
 
-<div class="header-language-background">
-    <div class="header-language-container">
-        <nav class="left-nav">
-            <a href="#"><?php echo $this->__('Contacts') ?></a>
-            <a href="#"><?php echo $this->__('Stores') ?></a>
-            <a href="#"><?php echo $this->__('About Us') ?></a>
-            <a href="#"><?php echo $this->__('Delivery') ?></a>
-            <a href="#"><?php echo $this->__('Payment') ?></a>
-            <a href="#"><?php echo $this->__('Bonus program') ?></a>
-        </nav>
+<div class="top-header">
+    <div class="container">
+        <div class="row">
+            <nav class="left-nav">
+                <a href="#"><?php echo $this->__('Contacts') ?></a>
+                <a href="#"><?php echo $this->__('Stores') ?></a>
+                <a href="#"><?php echo $this->__('About Us') ?></a>
+                <a href="#"><?php echo $this->__('Delivery') ?></a>
+                <a href="#"><?php echo $this->__('Payment') ?></a>
+                <a href="#"><?php echo $this->__('Bonus program') ?></a>
+            </nav>
 
-        <div class="store-language-container">
-            <?php echo $this->getChildHtml('store_language') ?>
-        </div>
+            <div class="localisation">
+                <?php echo $this->getChildHtml('store_language') ?>
+            </div>
 
-        <div class="your-city-wrapper">
-            <form>
-                <label for="your-city"><?php echo $this->__('Your City') ?></label>
-                <div class="select-wrapper">
-                    <select name="your-city" id="your-city">
-                        <option><?php echo $this->__('Kiev') ?></option>
-                        <option><?php echo $this->__('Ternopil') ?></option>
-                        <option><?php echo $this->__('Lviv') ?></option>
-                        <option><?php echo $this->__('Odessa') ?></option>
-                        <option><?php echo $this->__('Kharkov') ?></option>
-                    </select>
-                </div>
-            </form>
-        </div>
+            <div class="your-city-wrapper">
+                <form>
+                    <label for="your-city"><?php echo $this->__('Your City') ?></label>
+                    <div class="select-wrapper">
+                        <select name="your-city" id="your-city">
+                            <option><?php echo $this->__('Kiev') ?></option>
+                            <option><?php echo $this->__('Ternopil') ?></option>
+                            <option><?php echo $this->__('Lviv') ?></option>
+                            <option><?php echo $this->__('Odessa') ?></option>
+                            <option><?php echo $this->__('Kharkov') ?></option>
+                        </select>
+                    </div>
+                </form>
+            </div>
 
-        <div class="quick-links">
             <?php if (!$this->helper('customer')->isLoggedIn()):?>
                 <div class="autorization">
                     <a class="link log-in-link" href="<?php echo Mage::getUrl('customer/account/login') ?>" title="<?php echo $this->__('Log In ') ?>"><?php echo $this->__('Log In') ?></a>
@@ -74,9 +74,9 @@
     </div>
 </div>
 
-<header id="header" class="page-header">
-    <div class="page-header-container">
-        <section class="mid-header">
+<section class="mid-header">
+    <div class="container">
+        <div class="row">
             <a class="logo logo-wrappder" href="<?php echo $this->getUrl('') ?>">
                 <img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" class="large" />
             </a>
@@ -95,14 +95,48 @@
                 <button class="main-btn yelow-btn"><?php echo $this->__('Call back') ?></button>
             </form>
 
-            <div class="account-cart-wrapper">
-                <!-- Cart -->
-
-                <div class="header-minicart">
-                    <?php echo $this->getChildHtml('minicart_head'); ?>
-                </div>
+            <div class="action-buttons">
+                <ul>
+                    <li>
+                        <?php echo $this->getChildHtml('minicart_head'); ?>
+                    </li>
+                    <li>
+                        <a class="skip-link" href="#">
+                            <div class="icon-wrapper">
+                                <span class="action-btn compare" ></span>
+                            </div>
+                            <?php echo $this->__('Compare') ?>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="skip-link" href="#">
+                            <div class="icon-wrapper">
+                                <span class="action-btn wishlist"></span>
+                            </div>
+                            <?php echo $this->__('Wishlist') ?>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="skip-link" href="#">
+                            <div class="icon-wrapper">
+                                <span class="action-btn garage" ></span>
+                            </div>
+                            <?php echo $this->__('Garage') ?>
+                        </a>
+                    </li>
+                </ul>
             </div>
-        </section>
+
+            <div class="header-minicart">
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<header id="header" class="page-header">
+    <div class="page-header-container">
         <?php // In order for the language switcher to display next to logo on smaller viewports, it will be moved here.
               // See app.js for details ?>
         <div class="store-language-container"></div>
