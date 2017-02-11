@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+    <title>Magento theme</title>
+    <style>
+    	html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333333;
+  background-color: #ffffff;
+}
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+a {
+  color: #337ab7;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: #23527c;
+  text-decoration: underline;
+}
+a:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+figure {
+  margin: 0;
+}
+img {
+  vertical-align: middle;
+}
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+  max-width: 1290px;
+}
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.clearfix:before,
+.clearfix:after,
+.container:before,
+.container:after,
+.container-fluid:before,
+.container-fluid:after,
+.row:before,
+.row:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after,
+.container:after,
+.container-fluid:after,
+.row:after {
+  clear: both;
+}
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pull-right {
+  float: right !important;
+}
+.pull-left {
+  float: left !important;
+}
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+.invisible {
+  visibility: hidden;
+}
+.text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.hidden {
+  display: none !important;
+}
+@media screen and (max-width: 768px) {
+	.row {
+		margin-left: 0;
+    	margin-right: 0;
+	}
+}
+    </style>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+</head>
+<body>
+	<header>
+		<section class="top-header">
+			<div class="container">
+				<div class="row">
+					<nav class="left-nav">
+						<a href="#">Контакти</a>
+						<a href="#">Магазини</a>
+						<a href="#">Про нас</a>
+						<a href="#">Доставка</a>
+						<a href="#">Оплата</a>
+						<a href="#">Бонусна програма</a>
+					</nav>		
+					<div class="localisation">
+						<a href="#">Рос</a>
+						<a href="#" class="active_head">Укр</a>
+					</div>
+					<div class="your-city-wrapper">
+						<form>
+						    <label for="your-city">Ваше місто: </label>
+						    <div class="select-wrapper">
+							    <select name="your-city" id="your-city">
+							    	<option>Київ</option>
+							    	<option>Тернопіль</option>
+							    	<option>Львів</option>
+							    	<option>Одеса</option>
+							    	<option>Ужгород</option>
+							    	<option>Харків</option>
+							    </select>
+							</div>
+						</form>
+					</div>
+					<div class="autorization">
+						<a href="#">Реєстрація</a>
+						<a href="#" class="log-in-link">Вхід</a>
+					</div>
+				</div>	
+			</div>
+		</section>
+		<section class="mid-header">
+			<div class="container">
+				<div class="row">
+					<div class="logo-wrappder">
+						<img src="images/logo.png" alt="logotype">
+					</div>
+					<form id="search" action="#">
+						<div class="search-wrapper">
+							<input class="search-field" type="text" name="search" placeholder="Пошук за назвою, коду, категорії товару">
+						</div>
+					</form>
+					<form id="call-back" action="#">
+						<div class="select-wrapper">
+							<select name="call-number" id="call-number">
+								<option>0-800-30-15-85</option>
+								<option>0-800-30-35-95</option>
+								<option>0-800-31-81-73</option>
+							</select>
+						</div>
+						<button class="main-btn yelow-btn">Зворотній зв'язок</button>
+					</form>
+					<div class="action-buttons">
+						<ul>
+							<li>
+								<a href="#">
+									<div class="icon-wrapper">
+										<span class="shopping-cart"></span>
+									</div>
+									Корзиа
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="icon-wrapper">
+										<span class="compare" ></span>
+									</div>
+									Порівняння
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="icon-wrapper">
+										<span class="wishlist"></span>
+									</div>
+									Вибране
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="icon-wrapper">
+										<span class="garage" ></span>
+									</div>
+									Гараж
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="main-navigation-wrapper">
+			<div class="container">
+				<div class="row">	
+					<nav>	
+						<a class="menu-category first-item" href="#"><span class="first-menu-item">Каталог товарів</span></a>
+						<a class="menu-category" href="#"><span class="sale">Акції</span></a>
+						<a class="menu-category" href="#"><span class="compare-text">Порівнювальі тести</span></a>
+						<a class="menu-category" href="#"><span class="how-to-choose">Як обрати</span></a>
+						<a class="menu-category" href="#"><span class="news">Новини</span</a>
+					</nav>		
+				</div>
+			</div>
+		</section>
+		<section class="bread-crumbs">
+			<div class="container">
+				<div class="row">
+					<ul>
+						<li><a href="#">Головна</a></li>
+						<li><a href="#">Запчастини і витрати</a></li>
+						<li><a href="#">Масло</a></li>
+						<li><a href="#">Мотроне масло MOBIL	Super 30000 X15W - 40, 4л</a></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</header>
+	<div class="main-content">
+		<div class="container">
+			<div class="row">
+				<section class="product-descr">
+					<h2>Моторное масло MOBIL Super 3000 X1 5W-40, 4л</h2>
+					<div class="icket-cod">
+						<p>Код товара: 39207</p>
+					</div>
+					<div class="img-preview">
+						<a href="#">Blah Blah</a>
+					</div>
+					<div class="descr-wrapper">
+						<div class="statistic-panel">
+							<p class="avialable stat-item">Нет в наличии</p>
+							<div class="reating stat-item">
+								<img src="images/stars.png" alt="stars">
+							</div>
+							<div class="comments stat-item">
+								<a href="#">3 отзыва</a>
+							</div>
+							<div class="questions stat-item">
+								<a href="#">4 вопроса</a>
+							</div>
+						</div>
+						<div class="main-info">
+							<div class="price">
+								<span>456</span> грн
+							</div>
+							<button class="main-btn red-btn">Сообщить о поступлении</button>
+							<div class="description">
+								<p>ELF Tranself NFJ 75W-80 1л - Трансмиссионное масло</p>
+								<p>75W-80 1л - Трансмиссионное масло Тип масла: Трансмиссионное масло ; Тип основы масла: синтетическое масло; SAE: 75W-80; Емкость, л: 1 ELF Tranself NFJ 75W-80 1л - Трансмиссионное масло</p>
+								<p>Тип масла: Трансмиссионное масло ; Тип основы масла: синтетическое масло; SAE: 75W-80; Емкость, л: 1 ELF Tranself NFJ 75W-80 1л - Трансмиссионное масло Тип масла:     Трансмиссионное масло ; Тип основы масла: синтетическое масло; SAE: 75W-80; Емкость, л: 1ELF Tranself NFJ 75W-80 1л - Трансмиссионное масло</p>
+								<p>Тип масла: Трансмиссионное масло ; Тип основы масла: синтетическое масло</p>
+							</div>
+							<a href="#" class="share">Поделиться</a>
+							<a href="#" class="compare">Сравнить</a>	
+						</div>
+					</div>
+				</section>
+				<section class="relative-products">
+					<h3 class="section-title">Похожие товары</h3>
+					<div class="owl-carousel owl-theme">
+					  <div class="owl-item relative-item"> 
+							<span class="sale">Скидка -10%</span>
+					  		<img src="images/relative-1.jpg" alt="product">
+					  		<div class="product-info-wrapper">	
+								<p class="product-code">Код товара: 439745</p>
+								<span class='available-prod'>В наличии</span>
+					  		</div>		
+					  		<h4 class="product-title">
+					  			<a href="#">Моторное масло MOBIL Super 3000 X1 5W-40, 4л</a>
+					  		</h4>	
+					  		<span class="main-price">104грн</span>
+					  		<span class="old-price">125грн</span>	
+					   </div>
+					  <div class="owl-item relative-item"> 
+					  		<img src="images/relative-2.jpg" alt="product">
+					  		<div class="product-info-wrapper">	
+								<p class="product-code">Код товара: 439745</p>
+								<span class='available-prod'>В наличии</span>
+					  		</div>		
+					  		<h4 class="product-title">
+					  			<a href="#">Моторное масло MOBIL Super 5430 X4 5W-40, 4л</a>
+					  		</h4>	
+					  		<span class="main-price">142грн</span>
+					  </div>
+					  <div class="owl-item relative-item">
+					  		<img src="images/relative-3.jpg" alt="product"> 
+					  		<div class="product-info-wrapper">	
+								<p class="product-code">Код товара: 439745</p>
+								<span class='available-prod-no'>Заканчивается</span>
+					  		</div>		
+					  		<h4 class="product-title">
+					  			<a href="#">Моторное масло MOBIL Super 5430 X4 5W-40, 4л</a>
+					  		</h4>	
+					  		<span class="main-price">120грн</span>
+					  </div>
+					  <div class="owl-item relative-item"> 
+					  		<img src="images/relative-4.jpg" alt="product">
+					  		<div class="product-info-wrapper">	
+								<p class="product-code">Код товара: 439745</p>
+								<span class='available-prod'>В наличии</span>
+					  		</div>		
+					  		<h4 class="product-title">
+					  			<a href="#">Моторное масло MOBIL Super 5430 X4 5W-40, 4л</a>
+					  		</h4>	
+					  		<span class="main-price">92грн</span>
+					   </div>
+					  <div class="owl-item relative-item"> 
+					  		<img src="images/relative-2.jpg" alt="product">
+					  		<div class="product-info-wrapper">	
+								<p class="product-code">Код товара: 439745</p>
+								<span class='available-prod'>В наличии</span>
+					  		</div>		
+					  		<h4 class="product-title">
+					  			<a href="#">Моторное масло MOBIL Super 5430 X4 5W-40, 4л</a>
+					  		</h4>	
+					  		<span class="main-price">142грн</span>
+					  </div>
+					  <div class="owl-item relative-item">
+					  		<img src="images/relative-3.jpg" alt="product">
+					  		<div class="product-info-wrapper">	
+								<p class="product-code">Код товара: 439745</p>
+								<span class='available-prod'>В наличии</span>
+					  		</div>		
+					  		<h4 class="product-title">
+					  			<a href="#">Моторное масло MOBIL Super 5430 X4 5W-40, 4л</a>
+					  		</h4>	
+					  		<span class="main-price">108грн</span>
+					   </div>
+					  <div class="owl-item relative-item"> 
+					  		<img src="images/relative-4.jpg" alt="product">
+					  		<div class="product-info-wrapper">	
+								<p class="product-code">Код товара: 439745</p>
+								<span class='available-prod'>В наличии</span>
+					  		</div>		
+					  		<h4 class="product-title">
+					  			<a href="#">Моторное масло TSOLL Super 423430 X4 5W-40, 4л</a>
+					  		</h4>	
+					  		<span class="main-price">113грн</span>
+					  </div>
+					</div>
+				</section>
+				<!-- End Slider recently view-->
+				<section class="information-tabs">
+					<ul class="tabs">
+					  <li class="active" rel="tab1">Характеристики</li>
+					  <li rel="tab2">Описание</li>
+					</ul>
+					<div class="tab_container">
+					    <h3 class="d_active tab_drawer_heading" rel="tab1">Tab 1</h3>
+					    <div id="tab1" class="tab_content">
+						    <h2>Характеристики товара</h2>
+							<dl class="detail-chars-l">
+							    <div class="detail-chars-l-i">
+							        <dt class="detail-chars-l-i-title">
+							            Вязкость по SAE
+							        </dt>
+							        <dd class="detail-chars-l-i-field">
+							            5W-40
+							        </dd>
+							    </div>
+
+							    <div class="detail-chars-l-i">
+							        <dt class="detail-chars-l-i-title">
+							            Емкость
+							        </dt>
+							        <dd class="detail-chars-l-i-field">
+							            4 л
+							        </dd>
+							    </div>
+							    <div class="detail-chars-l-i">
+							        <dt class="detail-chars-l-i-title">
+							            Тип основы масла
+							        </dt>
+							        <dd class="detail-chars-l-i-field">
+							            Синтетическое
+							        </dd>
+							    </div>
+
+							    <div class="detail-chars-l-i">
+							        <dt class="detail-chars-l-i-title">
+							            Назначение
+							        </dt>
+							        <dd class="detail-chars-l-i-field">
+							            Моторное масло
+							        </dd>
+							    </div>
+
+							    <div class="detail-chars-l-i">
+							        <dt class="detail-chars-l-i-title">
+							            Допуски ОЕМ
+							        </dt>
+							        <dd class="detail-chars-l-i-field">
+							            BMW Longlife Oil 01
+							        </dd>
+							    </div>
+
+							    <div class="detail-chars-l-i">
+							        <dt class="detail-chars-l-i-title">
+							            Категория
+							        </dt>
+							        <dd class="detail-chars-l-i-field">
+							            Легковые
+							        </dd>
+							    </div>
+
+							    <div class="detail-chars-l-i">
+							        <dt class="detail-chars-l-i-title">
+							            Страна-производитель
+							        </dt>
+							        <dd class="detail-chars-l-i-field">
+							            Финляндия
+							        </dd>
+							    </div>
+							</dl>
+							<a href="#" class="more-link">Показать все характеристики</a>	
+					    </div>
+					  <!-- #tab1 -->
+					    <h3 class="tab_drawer_heading" rel="tab2">Tab 2</h3>
+					    <div id="tab2" class="tab_content">
+					        <h2>Описание товара</h2>
+					    	<p>Mobil Super 3000 X1 5W-40 представляет собой синтетическое моторное масло, обеспечивающее длительный срок службы двигателей в автомобилях различных типов и годов выпуска, а также повышенный уровень их защиты в широком диапазоне температур. Продукты семейства Mobil Super 3000™ уже хорошо зарекомендовали себя на рынке, поэтому Вы можете быть уверены в том. 
+
+							Продукты семейства Mobil Super 3000™ уже хорошо зарекомендовали себя на рынке, поэтому Вы можете быть уверены в том, что эксплуатационные свойства Вашего автомобиля будут полностью соответствовать ожиданиям. Продукты семейства Mobil Super 3000™ уже хорошо зарекомендовали себя на рынке, поэтому Вы можете быть уверены в том</p>
+
+							<p>Разнообразный и богатый опыт постоянный количественный рост и сфера нашей активности представляет собой интересный эксперимент проверки форм развития. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий позволяет выполнять важные задания по разработке новых предложений. Идейные соображения высшего порядка, а также укрепление и развитие структуры требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации влечет за собой процесс внедрения и модернизации существенных финансовых и административных условий. Идейные соображения высшего порядка, а также рамки и место обучения кадров требуют определения и уточнения системы обучения кадров, соответствует насущным потребностям. Не следует, однако забывать, что укрепление и развитие структуры в значительной степени обуславливает создание дальнейших направлений развития.</p>
+
+							<p>Товарищи! постоянное информационно-пропагандистское обеспечение нашей деятельности играет важную роль в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! сложившаяся структура организации обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития. С другой стороны сложившаяся структура организации играет важную роль в формировании существенных финансовых и административных условий.</p>
+							<a href="#" class="more-link">Подробнее</a>
+					    </div>
+					  <!-- #tab2 -->
+					</div>
+					<!-- .tab_container -->
+				</section>
+				<!-- End Tabs-->
+				<section class="reviewes">
+					<div class="top-buttons-wrapper">
+						<button class="red-btn main-btn pull-left">Отзывы (10)</button>
+						<button class="yelow-btn main-btn pull-right">Оставить отзыв</button>
+					</div>
+					<div class="review-item">
+						<div class="left-comment-side">
+							<h5 class="name">Владимир</h5>
+							<span class="when">04.07.2016</span>
+							<p class="comment">У Huawei краща основна камера ніж в Lenovo при тому, що Lenovo ніколи не були сильні в плані фото, а також у y6 pro кращий процесор (вища частота) і, як кажуть, краща оптимізація, що позитивно впливає на тривалість роботи. До того ж, мені здається, що у Huawei менше проблем по якості ніж у Lenovo. Захист від бризг у Р1m є скоріше рекламним трюком ніж реальним захистом та і потреба в ньому виникає не часто.</p>
+							<a href="#" class="more-link">Читать полностью</a>
+							<p class="goods"><span class="green-text">Достоинства: </span>хорошая батарея, и вообще неплохой смартфон</p>
+							<p class="bad"><span class="red-text">Недостатки: </span>не обнаружены</p>
+							<div class="bottom-buttons-wrapper">
+								<a href="#" class="reviews-link">1 ответ</a>
+								<a href="#" class="do-reviews">Ответить</a>
+							</div>
+							<div class="like-it">
+								<a href="#" class="dislike">5</a>
+								<a href="#" class="like">12</a>
+								<p>Был ли вам полезен этот отзыв:</p>
+							</div>
+						</div>
+						<div class="right-comment-side">
+							<span>Оценка</span>
+							<div class="reating stat-item">
+								<img src="images/stars.png" alt="stars">
+								<span class="reating-number">5.0</span>
+							</div>
+						</div>
+					</div>	
+					<div class="review-item">
+						<div class="left-comment-side">
+							<h5 class="name">Владимир</h5>
+							<span class="when">04.07.2016</span>
+							<p class="comment">У Huawei краща основна камера ніж в Lenovo при тому, що Lenovo ніколи не були сильні в плані фото, а також у y6 pro кращий процесор (вища частота) і, як кажуть, краща оптимізація, що позитивно впливає на тривалість роботи. До того ж, мені здається, що у Huawei менше проблем по якості ніж у Lenovo. Захист від бризг у Р1m є скоріше рекламним трюком ніж реальним захистом та і потреба в ньому виникає не часто.</p>
+							<a href="#" class="more-link">Читать полностью</a>
+							<p class="goods"><span class="green-text">Достоинства: </span>хорошая батарея, и вообще неплохой смартфон</p>
+							<p class="bad"><span class="red-text">Недостатки: </span>не обнаружены</p>
+							<div class="bottom-buttons-wrapper">
+								<a href="#" class="reviews-link">1 ответ</a>
+								<a href="#" class="do-reviews">Ответить</a>
+							</div>
+							<div class="like-it">
+								<a href="#" class="dislike">5</a>
+								<a href="#" class="like">12</a>
+								<p>Был ли вам полезен этот отзыв:</p>
+							</div>
+						</div>
+						<div class="right-comment-side">
+							<span>Оценка</span>
+							<div class="reating stat-item">
+								<img src="images/stars.png" alt="stars">
+								<span class="reating-number">5.0</span>
+							</div>
+						</div>
+					</div>
+					<div class="review-item">
+						<div class="left-comment-side">
+							<h5 class="name">Владимир</h5>
+							<span class="when">04.07.2016</span>
+							<p class="comment">У Huawei краща основна камера ніж в Lenovo при тому, що Lenovo ніколи не були сильні в плані фото, а також у y6 pro кращий процесор (вища частота) і, як кажуть, краща оптимізація, що позитивно впливає на тривалість роботи. До того ж, мені здається, що у Huawei менше проблем по якості ніж у Lenovo. Захист від бризг у Р1m є скоріше рекламним трюком ніж реальним захистом та і потреба в ньому виникає не часто.</p>
+							<a href="#" class="more-link">Читать полностью</a>
+							<p class="goods"><span class="green-text">Достоинства: </span>хорошая батарея, и вообще неплохой смартфон</p>
+							<p class="bad"><span class="red-text">Недостатки: </span>не обнаружены</p>
+							<div class="bottom-buttons-wrapper">
+								<a href="#" class="reviews-link">1 ответ</a>
+								<a href="#" class="do-reviews">Ответить</a>
+							</div>
+							<div class="like-it">
+								<a href="#" class="dislike">5</a>
+								<a href="#" class="like">12</a>
+								<p>Был ли вам полезен этот отзыв:</p>
+							</div>
+						</div>
+						<div class="right-comment-side">
+							<span>Оценка</span>
+							<div class="reating stat-item">
+								<img src="images/stars.png" alt="stars">
+								<span class="reating-number">5.0</span>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- End  review section-->
+				<section class="recent-viewed-products">
+					<h3 class="section-title">Вы просматривали</h3>
+					<div class="owl-carousel">
+					   <div class="recent-item"> 
+					  		<img src="images/relative-1.jpg" alt="product">		
+					  		<h4 class="product-title">
+					  			<a href="#">Моторное масло MOBIL Super 3000 X1 5W-40, 4л</a>
+					  		</h4>
+					  		<div class="product-info-wrapper">	
+								<span class='available-prod pull-left'>В наличии</span>
+					  		</div>	
+					  		<span class="main-price">104грн</span>
+					  		<button class="buy-btn pull-left">Купить</button>
+					  		<a href="#" class="compare">.</a>
+					  		<div class="statistic-wrapper">
+								<span><img src="images/stars.png" alt="stars"></span>
+								<div class="comments stat-item">
+									<a href="#">3 отзыва</a>
+								</div>
+							</div>
+					   </div>
+
+					    <div class="recent-item"> 
+					  		<img src="images/relative-1.jpg" alt="product">		
+					  		<h4 class="product-title">
+					  			<a href="#">Моторное масло MOBIL Super 3000 X1 5W-40, 4л</a>
+					  		</h4>
+					  		<div class="product-info-wrapper">	
+								<span class='available-prod pull-left'>В наличии</span>
+					  		</div>	
+					  		<span class="main-price">104грн</span>
+					  		<button class="buy-btn pull-left">Купить</button>
+					  		<a href="#" class="compare">.</a>
+					  		<div class="statistic-wrapper">
+								<span><img src="images/stars.png" alt="stars"></span>
+								<div class="comments stat-item">
+									<a href="#">3 отзыва</a>
+								</div>
+							</div>
+					   </div>
+					   <div class="recent-item"> 
+					  		<img src="images/relative-1.jpg" alt="product">		
+					  		<h4 class="product-title">
+					  			<a href="#">Моторное масло MOBIL Super 3000 X1 5W-40, 4л</a>
+					  		</h4>
+					  		<div class="product-info-wrapper">	
+								<span class='available-prod pull-left'>В наличии</span>
+					  		</div>	
+					  		<span class="main-price">104грн</span>
+					  		<button class="buy-btn pull-left">Купить</button>
+					  		<a href="#" class="compare">.</a>
+					  		<div class="statistic-wrapper">
+								<span><img src="images/stars.png" alt="stars"></span>
+								<div class="comments stat-item">
+									<a href="#">3 отзыва</a>
+								</div>
+							</div>
+					   </div>
+
+					    <div class="recent-item"> 
+					  		<img src="images/relative-1.jpg" alt="product">		
+					  		<h4 class="product-title">
+					  			<a href="#">Моторное масло MOBIL Super 3000 X1 5W-40, 4л</a>
+					  		</h4>
+					  		<div class="product-info-wrapper">	
+								<span class='available-prod pull-left'>В наличии</span>
+					  		</div>	
+					  		<span class="main-price">104грн</span>
+					  		<button class="buy-btn pull-left">Купить</button>
+					  		<a href="#" class="compare">.</a>
+					  		<div class="statistic-wrapper">
+								<span><img src="images/stars.png" alt="stars"></span>
+								<div class="comments stat-item">
+									<a href="#">3 отзыва</a>
+								</div>
+							</div>
+					   </div>
+					   <div class="recent-item"> 
+					  		<img src="images/relative-1.jpg" alt="product">		
+					  		<h4 class="product-title">
+					  			<a href="#">Моторное масло MOBIL Super 3000 X1 5W-40, 4л</a>
+					  		</h4>
+					  		<div class="product-info-wrapper">	
+								<span class='available-prod pull-left'>В наличии</span>
+					  		</div>	
+					  		<span class="main-price">104грн</span>
+					  		<button class="buy-btn pull-left">Купить</button>
+					  		<a href="#" class="compare">.</a>
+					  		<div class="statistic-wrapper">
+								<span><img src="images/stars.png" alt="stars"></span>
+								<div class="comments stat-item">
+									<a href="#">3 отзыва</a>
+								</div>
+							</div>
+					   </div>
+
+					    <div class="recent-item"> 
+					  		<img src="images/relative-1.jpg" alt="product">		
+					  		<h4 class="product-title">
+					  			<a href="#">Моторное масло MOBIL Super 3000 X1 5W-40, 4л</a>
+					  		</h4>
+					  		<div class="product-info-wrapper">	
+								<span class='available-prod pull-left'>В наличии</span>
+					  		</div>	
+					  		<span class="main-price">104грн</span>
+					  		<button class="buy-btn pull-left">Купить</button>
+					  		<a href="#" class="compare">.</a>
+					  		<div class="statistic-wrapper">
+								<span><img src="images/stars.png" alt="stars"></span>
+								<div class="comments stat-item">
+									<a href="#">3 отзыва</a>
+								</div>
+							</div>
+					   </div>  
+
+					</div>
+				</section>
+				<!-- End relative product section-->
+			</div>
+			<!-- End row container -->
+		</div>
+		<!-- End greed container -->
+	</div>
+	<!-- End main container -->
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="left-footer-side">
+						<div class="catalog"></div>
+				</div>
+				<div class="right-footer-side">
+					
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="js/libs/jquery/jquery-2.2.0.min.js"></script>
+	<script src="js/libs/owl/owl.carousel.min.js"></script>
+	<script src="js/function.js"></script>
+</body>
+</html>

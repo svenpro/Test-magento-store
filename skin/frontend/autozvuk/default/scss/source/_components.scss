@@ -1,0 +1,99 @@
+//
+//  Search form 
+//  _____________________________________________
+.search-wrapper {
+	position: relative;
+	margin-top: 35px;		
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		right: 15px;
+		top: 15px;
+		background: url($search-image) $search-offset-x $search-offset-y;
+		height: $search-height;
+		width: $search-width;
+	}
+	.search-field {
+		border-radius: 22px;
+		height: 45px;
+		width: 100%;
+		padding-left: 15px;
+		padding-right: 40px;
+		border: 1px solid $color-light-gray-3;
+	}
+}
+//
+//  Select fieald 
+//  _____________________________________________
+.select-wrapper {
+	float: left;
+	position: relative;
+    margin-left: 10px;
+    height: 44px;
+    &:after {
+    	float: left;
+    	content: " ";
+    	right: 15px;
+		position: absolute;
+    	display: block;
+    	margin-top: 20px;
+    	appearance: none;
+		width: $arrow-down-width;
+		height: $arrow-down-height;
+		background: url($arrow-down-image) $arrow-down-offset-x $arrow-down-offset-y;
+    }
+} 
+select {
+	color: $color-primary-font;
+    background-color: transparent;
+    padding: 0 29px 0 15px;
+    line-height: 44px;
+    vertical-align: middle;
+    display: inline-block;
+    border: none;
+    float: left;
+    width: auto;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+}
+//
+//  Button styles 
+//  _____________________________________________
+.main-btn {
+    background: transparent;
+    border: 2px solid;
+    color: #333;
+    padding: 5px 20px;
+}
+.yelow-btn {
+	border: 2px solid $color-yelow;
+	&:hover,
+	&:active,
+	&:focus  {
+		background-color: $color-yelow;
+	}
+}
+.red-btn {
+	border: 2px solid $color-red-main;
+	&:hover,
+	&:active,
+	&:focus  {
+		background-color:$color-red-main;
+	}
+}
+.buy-btn {
+	padding: 10px 25px;
+    border: 0;
+    margin-right: 10px;
+    color: #fff;
+    font-weight: 700;
+    background-color: $color-red-main;
+    &:hover,
+	&:active,
+	&:focus  {
+		background-color: $color-red-darker;
+	}
+}

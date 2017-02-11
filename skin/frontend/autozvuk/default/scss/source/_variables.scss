@@ -1,0 +1,31 @@
+//
+//  Colores variables
+//  _____________________________________________
+$color-primary-font: #333;
+$color-link: #777;
+$color-link-hover: darken($color-link, 20%);
+$color-light-gray-1: #eff0f3;
+$color-light-gray-2: #f7f7f9;
+$color-light-gray-3: #d8d9dc;
+$color-light-gray-3: #c2c2c2;
+$color-dark-gray: #3c3f43;
+$color-mid-gray: lighten($color-dark-gray, 20%);
+$color-light-gray: lighten($color-dark-gray, 40%);
+$color-yelow: #ffdc2c;
+$color-yelow-2: #ff8941;
+$color-red-main: #fb2539;
+$color-red-darker: darken($color-red-main, 10%);
+$color-green: #57ae85;
+
+//
+//  Font variables
+//  _____________________________________________
+$font-weight-bold: 700;
+$font-size-title: 28px;
+$font-size-middle-title: 22px;
+$font-size-small-title: 18px;
+$font-size-main-price: 26px;
+$font-size-primary: 13px;
+
+
+
