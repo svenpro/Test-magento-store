@@ -1,7 +1,14 @@
 .section-title {
-	font-size: $font-size-title;
-	margin-top: 0;
+	margin-right: 160px;
+	h1{
+		font-size: $font-size-title;
+		margin-top: 0;
+		color: $color-primary-font;
+		font-weight: 700;
+		display: inline;
+	}
 }
+
 .available-prod {
 	float: right;
 	color: $color-green;
@@ -58,6 +65,31 @@
 	color: $color-red-main;
 	float: right;
 }
+
+.product-img-box {
+	margin-top: 30px;
+	position: relative;
+	.product-image {
+		border: 1px solid #fff !important;
+	}
+	.more-views {
+		display: block;
+		position: absolute;
+		top: 0px;
+		max-width: 145px;
+	}
+	.preview-thumb {
+		display: block;
+		float: left;
+		padding: 3px;
+		margin: 0 7px 7px 0;
+		border:  1px solid $color-light-gray-1;
+		&:hover {
+			border: 1px solid $color-yelow;
+		}
+	}
+}
+
 .relative-products {
 	display: inline-block;
     width: 100%;

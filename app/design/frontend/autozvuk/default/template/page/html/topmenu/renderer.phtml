@@ -51,10 +51,10 @@ foreach ($children as $child) {
 
     $html .= '<li '. $this->_getRenderedMenuItemAttributes($child) .'>';
 
-    $html .= '<a href="'. $child->getUrl() .'" class="'. $outermostClassCode .' '. $_hasChildren .'">'. $this->escapeHtml($this->__($child->getName())) .'</a>';
+    $html .= '<a href="'. $child->getUrl() .'" class="'. $outermostClassCode .' '. $_hasChildren .' menu-category">'. $this->escapeHtml($this->__($child->getName())) .'</a>';
 
     if (!empty($childrenWrapClass)) {
-        $html .= '<div class="'. $childrenWrapClass .'">';
+        $html .= '<div class="'. $childrenWrapClass .' menu-category">';
     }
 
     $nextChildLevel = $childLevel + 1;

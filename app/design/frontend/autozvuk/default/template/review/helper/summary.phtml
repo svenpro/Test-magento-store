@@ -20,18 +20,19 @@
  *
  * @category    design
  * @package     base_default
- * @copyright   Copyright (c) 2006-2016 X.commerce, Inc. and affiliates (http://www.magento.com)
+ * @copyright   Copyright (c) 2006-2017 X.commerce, Inc. and affiliates (http://www.magento.com)
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
-<?php /* @var $this Mage_Catalog_Block_Product_View_Abstract */?>
-<?php $_product = $this->getProduct() ?>
-
-<?php if ($this->displayProductStockStatus()): ?>
-    <?php if ($_product->isAvailable()): ?>
-        <p class="avialable stat-item in-stock"><?php echo $this->__('In stock') ?></span></p>
-    <?php else: ?>
-        <p class="avialable stat-item"><?php echo $this->__('Out of stock') ?></span></p>
-    <?php endif; ?>
+<?php if ($this->getReviewsCount()): ?>
+    <?php if ($this->getRatingSummary()):?>
+        <div class="rating-box stat-item">
+            <div class="rating" style="width:<?php echo $this->getRatingSummary() ?>%"></div>
+        </div>
+    <?php endif;?>
+    <p class="comments stat-item">
+        <a href="<?php echo $this->getReviewsUrl() ?>"><?php echo $this->__('%d Review(s)', $this->getReviewsCount()) ?></a>
+    </p>
+<?php elseif ($this->getDisplayIfEmpty()): ?>
+    <p class="no-rating stat-item"><a href="<?php echo $this->getReviewsUrl() ?>#review-form"><?php echo $this->__('Be the first to review this product') ?></a></p>
 <?php endif; ?>
-

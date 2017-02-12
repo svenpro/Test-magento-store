@@ -172,7 +172,14 @@ ul {
 }
 .main-navigation-wrapper {
 	background-color: $color-dark-gray;
-	.menu-category {
+}
+.main-navigation-wrapper nav .nav-primary {
+	margin-top: 0;
+	.nav-1,
+	.nav-2,
+	.nav-3,
+	.nav-4,
+	.nav-5 {
 		position: relative;
 		width: 20%;
 	    border-right: 1px solid $color-light-gray-3;
@@ -180,46 +187,63 @@ ul {
 	    float: left;
 	    display: block;
 	    line-height: 55px;
-	    color: #fff;
 	    position: relative;
 	    &:hover {
 	    	background-color: darken($color-dark-gray, 10%);
-	    }	
+	    }
 	}
-	.menu-category span {
+	>li.level0 ul {
+		top: 55px;
+		background-color: $color-dark-gray;
+		a {
+			color: #fff;
+			padding-left: 10px !important;
+			&:after {
+				display: none !important;
+			}
+			&:hover {
+				background-color: darken($color-dark-gray, 10%);
+			}
+		}
+
+	}
+	a.level0 {
 		position: relative;
 		padding-left: 35px;
+		line-height: 55px;
+		color: #fff;
+		text-transform: capitalize;
 		&:before {
 			position: absolute;
 			content: "";
 			display: block;
 			left: 0;
-			top: -4px;
+			top: 19px;
 		}
 	}
-	.sale:before {
-		top: -2;
+	.nav-2 a:before {
+		top: 17px;
 		background: url($persent-image) $persent-offset-x $persent-offset-y;
 		height: $persent-height;
 		width: $persent-width;
 	}
-	.compare-text:before {
+	.nav-3 a:before {
 		background: url($podium-image) $podium-offset-x $podium-offset-y;
 		height: $podium-height;
 		width: $podium-width;
 	}
-	.how-to-choose:before {
+	.nav-4 a:before {
 		background: url($ask-image) $ask-offset-x $ask-offset-y;
 		height: $ask-height;
 		width: $ask-width;
 	}
-	.news:before {
+	.nav-5 a:before {
 		margin-top: 5px;
 		background: url($list-yelow-image)$list-yelow-offset-x $list-yelow-offset-y;
 		height: $list-yelow-height;
 		width: $list-yelow-width;
 	}
-	.first-item {
+	.level0.nav-1.parent {
 		background-color: $color-red-main;
 		text-align: left;
 		border-right: 0;
@@ -228,7 +252,7 @@ ul {
 		&:hover {
 	    	background-color: darken($color-red-main, 10%);
 	    }	
-	    .first-menu-item {
+	    a {
 	    	padding-left: 0;
 	    	position: static;
 		    &:after {
@@ -245,6 +269,7 @@ ul {
 	}
 }
 .bread-crumbs {
+	margin: 20px 0;
 	ul li {
 		position: relative;
 	    float: left;
@@ -254,7 +279,7 @@ ul {
 			content: "";
 			position: absolute;
 		    right: 0;
-		    top: 6px;
+		    top: 8px;
 		    display: block;
 		    transform: rotate(-90deg);
 			width: $arrow-down-width;
@@ -269,17 +294,15 @@ ul {
 .main-content {
 	margin: 30px 0;
 }
-.product-descr {
-	h2 {
-		font-size: 24px;
-		display: inline;
-	}
+.product-essential {
+	position: relative;
 	.icket-cod {
-		float: right;
-		background-color: $color-yelow;
-		position: relative;
+		right: 0;
+		top: 0;
+		background-color: #ffdc2c;
+		position: absolute;
 		text-align: right;
-		padding: 10px 10px 10px 15px; 
+		padding: 10px 10px 10px 15px;
 		p {
 			margin: 0;
 		}
@@ -287,21 +310,21 @@ ul {
 			content: "";
 			position: absolute;
 			left: -6px;
-			top: 11px;
+			top: 13px;
 			display: block;
 			width: 14px;
 			height: 14px;
 			background-color: #fff;
 			border-radius: 7px;
-		} 
+		}
 	}
-	
+
 }
 .img-preview {
 	width: 45%;
 	float: left;
 }
-.descr-wrapper {
+.product-view .descr-wrapper {
 	margin-top: 30px;
 	width: 55%;
 	float: left;
@@ -310,7 +333,7 @@ ul {
 	}
 	.stat-item {
 		display: block;
-		float: left;
+		float: left !important;
 		margin-right: 25px;
 	}
 	.avialable {
@@ -344,12 +367,13 @@ ul {
     	margin-top: 47px;
     	padding: 30px;
     	background-color: $color-light-gray-2;
-    	.price {
-    		font-size: 40px;
-    		margin-bottom: 30px;
-    		color: #999;
-    		span {
+    	.price-wrp {
+    		margin-bottom: 25px;
+			display: inline-block;
+    		span.price {
     			font-weight: 700;
+				font-size: 40px;
+				color: #999;
     		}
     	}
     	.main-btn {
