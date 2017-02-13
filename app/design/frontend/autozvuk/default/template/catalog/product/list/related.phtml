@@ -26,7 +26,7 @@
 ?>
 <?php if($this->getItems()->getSize()): ?>
 <div class="relative-products">
-    <div class="scond-title">
+    <div class="second-title">
       <span><?php echo $this->__('Related Products') ?></span>
     </div>
     <div class="block-content">
@@ -36,7 +36,7 @@
                 <div class="product">
                     <a href="<?php echo $_item->getProductUrl() ?>" title="<?php echo $this->escapeHtml($_item->getName()) ?>" class="product-image"><img src="<?php echo $this->helper('catalog/image')->init($_item, 'thumbnail')->resize(200) ?>" width="auto" height="200" alt="<?php echo $this->escapeHtml($_item->getName()) ?>" /></a>
                     <div class="product-info-wrapper">
-                        <p class="product-code"><?php echo $this->__('Product price: 439745 ') ?></p>
+                        <p class="product-code"><?php echo $this->__('Product number: 439745 ') ?></p>
                         <span class='available-prod'><?php echo $this->__('In stock') ?></span>
                     </div>
                     <div class="product-details">

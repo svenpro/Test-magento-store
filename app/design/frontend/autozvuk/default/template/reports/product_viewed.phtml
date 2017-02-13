@@ -1,0 +1,63 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magento.com for more information.
+ *
+ * @category    design
+ * @package     rwd_default
+ * @copyright   Copyright (c) 2006-2017 X.commerce, Inc. and affiliates (http://www.magento.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+/* @var $this Mage_Reports_Block_Product_Viewed */
+?>
+<?php if ($_products = $this->getRecentlyViewedProducts()): ?>
+<section class="recent-viewed-products">
+    <div class="second-title">
+        <span><?php echo $this->__('Recently Viewed Products') ?></span>
+    </div>
+    <ol id="mini-products-list" class="owl-carousel">
+    <?php foreach ($_products as $_item): ?>
+        <li class="recent-item">
+            <a href="<?php echo $this->getProductUrl($_item) ?>">
+                <span class="product-image"><img src="<?php echo $this->helper('catalog/image')->init($_item, 'thumbnail')->resize(200, 200)->setWatermarkSize('30x10'); ?>" width="auto" height="200" alt="<?php echo $this->escapeHtml($this->getProductName()) ?>" /></span>
+            </a>
+            <div class="product-details">
+                <p class="product-name">
+                    <a href="<?php echo $this->getProductUrl($_item) ?>">
+                        <?php echo $this->helper('catalog/output')->productAttribute($_item, $_item->getName() , 'name') ?>
+                    </a>
+                </p>
+            </div>
+            <div class="product-info-wrapper">
+                <span class='available-prod pull-left'>В наличии</span>
+            </div>
+            <span class="main-price"><?php echo $this->getPriceHtml($_item, true, '-related') ?></span>
+            <button class="buy-btn pull-left">Купить</button>
+            <a href="#" class="compare">.</a>
+            <div class="statistic-wrapper">
+                <span><img src="images/stars.png" alt="stars"></span>
+                <div class="comments stat-item">
+                    <a href="#">3 отзыва</a>
+                </div>
+            </div>
+        </li>
+    <?php endforeach; ?>
+    </ol>
+    <script type="text/javascript">decorateList('recently-viewed-items');</script>
+</section>
+<?php endif; ?>

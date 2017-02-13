@@ -17,6 +17,10 @@ ul {
 		list-style: none;
 	}
 }
+.top-header select,
+.mid-header select {
+	line-height: 44px;
+}
 .top-header {
 	background-color: $color-light-gray-1;
 	.left-nav,
@@ -169,103 +173,8 @@ ul {
 			width:$cart-icon-width;
 		}
 	}
-}
-.main-navigation-wrapper {
-	background-color: $color-dark-gray;
-}
-.main-navigation-wrapper nav .nav-primary {
-	margin-top: 0;
-	.nav-1,
-	.nav-2,
-	.nav-3,
-	.nav-4,
-	.nav-5 {
-		position: relative;
-		width: 20%;
-	    border-right: 1px solid $color-light-gray-3;
-	    text-align: center;
-	    float: left;
-	    display: block;
-	    line-height: 55px;
-	    position: relative;
-	    &:hover {
-	    	background-color: darken($color-dark-gray, 10%);
-	    }
-	}
-	>li.level0 ul {
-		top: 55px;
-		background-color: $color-dark-gray;
-		a {
-			color: #fff;
-			padding-left: 10px !important;
-			&:after {
-				display: none !important;
-			}
-			&:hover {
-				background-color: darken($color-dark-gray, 10%);
-			}
-		}
-
-	}
-	a.level0 {
-		position: relative;
-		padding-left: 35px;
-		line-height: 55px;
-		color: #fff;
-		text-transform: capitalize;
-		&:before {
-			position: absolute;
-			content: "";
-			display: block;
-			left: 0;
-			top: 19px;
-		}
-	}
-	.nav-2 a:before {
-		top: 17px;
-		background: url($persent-image) $persent-offset-x $persent-offset-y;
-		height: $persent-height;
-		width: $persent-width;
-	}
-	.nav-3 a:before {
-		background: url($podium-image) $podium-offset-x $podium-offset-y;
-		height: $podium-height;
-		width: $podium-width;
-	}
-	.nav-4 a:before {
-		background: url($ask-image) $ask-offset-x $ask-offset-y;
-		height: $ask-height;
-		width: $ask-width;
-	}
-	.nav-5 a:before {
-		margin-top: 5px;
-		background: url($list-yelow-image)$list-yelow-offset-x $list-yelow-offset-y;
-		height: $list-yelow-height;
-		width: $list-yelow-width;
-	}
-	.level0.nav-1.parent {
-		background-color: $color-red-main;
-		text-align: left;
-		border-right: 0;
-		padding: 0 20px;	
-		position: relative;
-		&:hover {
-	    	background-color: darken($color-red-main, 10%);
-	    }	
-	    a {
-	    	padding-left: 0;
-	    	position: static;
-		    &:after {
-				position: absolute;
-				content: "";
-				display: block;
-				right: 20px;
-			    top: 23px;
-				background: url($list-image) $list-offset-x $list-offset-y;
-				height: $list-height;
-				width: $list-width;
-			}
-		}
+	.search-autocomplete:before {
+		display: none;
 	}
 }
 .bread-crumbs {
