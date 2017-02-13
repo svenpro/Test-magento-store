@@ -25,28 +25,23 @@
  */
 ?>
 <?php if($this->getItems()->getSize()): ?>
-<div class="block block-related">
-    <div class="block-title">
-        <strong><span><?php echo $this->__('Related Products') ?></span></strong>
+<div class="relative-products">
+    <div class="scond-title">
+      <span><?php echo $this->__('Related Products') ?></span>
     </div>
     <div class="block-content">
-        <p class="block-subtitle"><?php echo $this->__('Check items to add to the cart or') ?>&nbsp;<a href="#" onclick="selectAllRelated(this); return false;"><?php echo $this->__('select all') ?></a></p>
-        <ol class="mini-products-list" id="block-related">
+        <ol class=" owl-carousel owl-theme" id="block-related">
         <?php foreach($this->getItems() as $_item): ?>
-            <li class="item">
-                <?php if(!$_item->isComposite() && $_item->isSaleable()): ?>
-                    <?php if (!$_item->getRequiredOptions()): ?>
-                        <input type="checkbox" class="checkbox related-checkbox" id="related-checkbox<?php echo $_item->getId() ?>" name="related_products[]" value="<?php echo $_item->getId() ?>" />
-                    <?php endif; ?>
-                <?php endif; ?>
+            <li class="relative-item">
                 <div class="product">
-                    <a href="<?php echo $_item->getProductUrl() ?>" title="<?php echo $this->escapeHtml($_item->getName()) ?>" class="product-image"><img src="<?php echo $this->helper('catalog/image')->init($_item, 'thumbnail')->resize(50) ?>" width="50" height="50" alt="<?php echo $this->escapeHtml($_item->getName()) ?>" /></a>
+                    <a href="<?php echo $_item->getProductUrl() ?>" title="<?php echo $this->escapeHtml($_item->getName()) ?>" class="product-image"><img src="<?php echo $this->helper('catalog/image')->init($_item, 'thumbnail')->resize(200) ?>" width="auto" height="200" alt="<?php echo $this->escapeHtml($_item->getName()) ?>" /></a>
+                    <div class="product-info-wrapper">
+                        <p class="product-code"><?php echo $this->__('Product price: 439745 ') ?></p>
+                        <span class='available-prod'><?php echo $this->__('In stock') ?></span>
+                    </div>
                     <div class="product-details">
-                        <p class="product-name"><a href="<?php echo $_item->getProductUrl() ?>"><?php echo $this->escapeHtml($_item->getName()) ?></a></p>
-                        <?php echo $this->getPriceHtml($_item, true, '-related') ?>
-                        <?php if ($this->helper('wishlist')->isAllow()) : ?>
-                            <a href="<?php echo $this->getAddToWishlistUrl($_item) ?>" class="link-wishlist"><?php echo $this->__('Add to Wishlist') ?></a>
-                        <?php endif; ?>
+                        <p class="product-title"><a href="<?php echo $_item->getProductUrl() ?>"><?php echo $this->escapeHtml($_item->getName()) ?></a></p>
+                        <span class="main-price"><?php echo $this->getPriceHtml($_item, true, '-related') ?></span>
                     </div>
                 </div>
             </li>
