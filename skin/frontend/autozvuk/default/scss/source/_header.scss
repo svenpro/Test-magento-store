@@ -60,7 +60,7 @@ ul {
 		    border-left: 1px solid $color-light-gray-3;
 		}
 	}
-	.form-language a:first-child {
+	.form-language a:last-child {
 		border-bottom: 2px solid $color-red-main;
 	}
 	.autorization {
@@ -125,6 +125,9 @@ ul {
 		}
 	}
 	.action-buttons {
+		#header-cart.skip-active {
+			top: 90px;
+		}
 		width: 25%;
 		position: relative;
 		ul li {		
@@ -247,6 +250,10 @@ ul {
 		display: block;
 		float: left !important;
 		margin-right: 25px;
+		img {
+			position: relative;
+			top: 5px;
+		}
 	}
 	.avialable {
 		font-weight: 700;

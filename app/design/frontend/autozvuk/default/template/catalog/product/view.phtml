@@ -51,6 +51,9 @@
 
         <div class="product-shop descr-wrapper">
             <?php echo $this->getChildHtml('product_type_data') ?>
+            <div class="reating stat-item">
+                <img src='<?php echo $this->getSkinUrl('images/stars.png'); ?>' alt="stars">
+            </div>
             <?php echo $this->getReviewsSummaryHtml($_product, false, true)?>
             <div class="questions stat-item">
                 <a href="#"><?php echo $this->__('4 Questions'); ?></a>
@@ -181,4 +184,5 @@
             <?php endif; ?>
         </div>
     </section>
+    <?php echo $this->getChildHtml('reviews') ?>
 </div>

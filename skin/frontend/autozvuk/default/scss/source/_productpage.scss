@@ -8,6 +8,7 @@
 			color: $color-primary-font;
 			font-weight: 700;
 			display: inline;
+			text-transform: inherit;
 		}
 	}
 	.second-title {
@@ -434,6 +435,9 @@
 	//
 	//  Recent view section
 	//  _____________________________________________
+	.form-add {
+		display: none;
+	}
 	.recent-viewed-products {
 		display: inline-block;
 		position: relative;
@@ -446,6 +450,8 @@
 		.recent-item img {
 			max-width: 175px;
 			margin: 0 auto;
+			position: relative;
+			top: 3px;
 		}
 		.available-prod {
 			display: inline;

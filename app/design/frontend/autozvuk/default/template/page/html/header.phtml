@@ -59,15 +59,19 @@
                 </form>
             </div>
 
-            <?php if (!$this->helper('customer')->isLoggedIn()):?>
+            <?php if (!$this->helper('customer')->isLoggedIn()): ?>
                 <div class="autorization">
-                    <a class="link log-in-link" href="<?php echo Mage::getUrl('customer/account/login') ?>" title="<?php echo $this->__('Log In ') ?>"><?php echo $this->__('Log In') ?></a>
-                    <a class="link" href="<?php echo Mage::getUrl('customer/account/create') ?>" title="<?php echo $this->__('REGISTER') ?>"><?php echo $this->__('REGISTER') ?></a>
+                    <a class="link log-in-link" href="<?php echo Mage::getUrl('customer/account/login') ?>"
+                       title="<?php echo $this->__('Log In ') ?>"><?php echo $this->__('Log In') ?></a>
+                    <a class="link" href="<?php echo Mage::getUrl('customer/account/create') ?>"
+                       title="<?php echo $this->__('Register') ?>"><?php echo $this->__('Register') ?></a>
                 </div>
             <?php else: ?>
                 <div class="autorization">
-                    <a class="link log-in-link" href="<?php echo Mage::getUrl('customer/account') ?>" title="<?php echo $this->__('My Account') ?>"><?php echo $this->__('MY ACCOUNT') ?></a>
-                    <a class="link" href="<?php echo $this->helper('customer')->getLogoutUrl(); ?>" title="<?php echo $this->__('Logout') ?>"><?php echo $this->__('LOGOUT') ?></a>
+                    <a class="link log-in-link" href="<?php echo Mage::getUrl('customer/account') ?>"
+                       title="<?php echo $this->__('My Account') ?>"><?php echo $this->__('MY ACCOUNT') ?></a>
+                    <a class="link" href="<?php echo $this->helper('customer')->getLogoutUrl(); ?>"
+                       title="<?php echo $this->__('Logout') ?>"><?php echo $this->__('LOGOUT') ?></a>
                 </div>
             <?php endif; ?>
         </div>
@@ -78,7 +82,7 @@
     <div class="container">
         <div class="row">
             <a class="logo logo-wrappder" href="<?php echo $this->getUrl('') ?>">
-                <img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" class="large" />
+                <img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" class="large"/>
             </a>
 
             <!-- Search -->
@@ -103,7 +107,7 @@
                     <li>
                         <a class="skip-link" href="#">
                             <div class="icon-wrapper">
-                                <span class="action-btn compare" ></span>
+                                <span class="action-btn compare"></span>
                             </div>
                             <?php echo $this->__('Compare') ?>
                         </a>
@@ -119,7 +123,7 @@
                     <li>
                         <a class="skip-link" href="#">
                             <div class="icon-wrapper">
-                                <span class="action-btn garage" ></span>
+                                <span class="action-btn garage"></span>
                             </div>
                             <?php echo $this->__('Garage') ?>
                         </a>
@@ -156,7 +160,7 @@
 <header id="header" class="page-header">
     <div class="page-header-container">
         <?php // In order for the language switcher to display next to logo on smaller viewports, it will be moved here.
-              // See app.js for details ?>
+        // See app.js for details ?>
         <div class="store-language-container"></div>
 
         <!-- Skip Links -->

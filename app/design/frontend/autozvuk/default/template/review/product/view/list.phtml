@@ -29,7 +29,7 @@
 <section class="reviewes">
     <div class="top-buttons-wrapper">
         <button class="red-btn main-btn pull-left"><?php echo $this->__('Review (10)'); ?></button>
-        <button class="yelow-btn main-btn pull-right"><?php echo $this->__('Add Review'); ?></button>
+        <a href="#add-form" id="add-review"class="yelow-btn main-btn pull-right"><?php echo $this->__('Add Review'); ?></a>
     </div>
 
         <?php if (count($_items)):?>
@@ -85,3 +85,8 @@
         <?php echo $this->getChildHtml('review_form') ?>
     </div>
 </section>
+<script>
+    jQuery('#add-review').on('click', function(){
+        jQuery('.form-add').show();
+    })
+</script>

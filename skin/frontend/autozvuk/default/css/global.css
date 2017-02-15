@@ -7,7 +7,8 @@
       margin-top: 0;
       color: #333;
       font-weight: 700;
-      display: inline; }
+      display: inline;
+      text-transform: inherit; }
   .catalog-product-view .second-title span,
   .catalog-product-view .second-title h1 {
     font-size: 28px;
@@ -327,6 +328,8 @@
         font-weight: 700; }
       .catalog-product-view .reviewes .right-comment-side .reating-number {
         margin-left: 10px; }
+  .catalog-product-view .form-add {
+    display: none; }
   .catalog-product-view .recent-viewed-products {
     display: inline-block;
     position: relative;
@@ -337,7 +340,9 @@
       overflow: hidden; }
     .catalog-product-view .recent-viewed-products .recent-item img {
       max-width: 175px;
-      margin: 0 auto; }
+      margin: 0 auto;
+      position: relative;
+      top: 3px; }
     .catalog-product-view .recent-viewed-products .available-prod {
       display: inline;
       width: 100%;
@@ -638,7 +643,7 @@ ul {
     .top-header .your-city-wrapper .select-wrapper {
       border-right: 1px solid #c2c2c2;
       border-left: 1px solid #c2c2c2; }
-  .top-header .form-language a:first-child {
+  .top-header .form-language a:last-child {
     border-bottom: 2px solid #fb2539; }
   .top-header .autorization {
     text-align: right; }
@@ -696,6 +701,8 @@ ul {
 .mid-header .action-buttons {
   width: 25%;
   position: relative; }
+  .mid-header .action-buttons #header-cart.skip-active {
+    top: 90px; }
   .mid-header .action-buttons ul li {
     float: right;
     width: 25%;
@@ -798,6 +805,9 @@ ul {
     display: block;
     float: left !important;
     margin-right: 25px; }
+    .product-view .descr-wrapper .stat-item img {
+      position: relative;
+      top: 5px; }
   .product-view .descr-wrapper .avialable {
     font-weight: 700; }
   .product-view .descr-wrapper .questions,
