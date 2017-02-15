@@ -1,10 +1,139 @@
-.footer-wrapp {
-  background-color: #474a4e;
-  .footer {
-    .links a,
-    span {
-      color: #fff;
+.footer-wrapper {
+  font-family: prxima-nova;
+  background: url('../images/footer-bg.png');
+  background-repeat: repeat-y;
+  background-size: 100%;
+  .l-column,
+  .left-footer-side,
+  .right-footer-side {
+    float: left;
+    font-size: 14px;
+    display: block;
+    li a {
+      color: $color-footer-link;
+      line-height: 2em;
     }
   }
+  .left-footer-side {
+    padding-right: 3%;
+    width: 75%;
+    background-color: #474a4e;
+  }
+  .right-footer-side {
+    width: 25%;
+    height: 100%;
+    background-color: #3c3f43;
+    padding: 0 3%;
+    position: absolute;
+    right: 0;
+  }
+  .l-column {
+    width: 20%;
+    padding-bottom: 20px;
+  }
+  .footer-title {
+    font-size: 16px;
+    margin-top: 45px;
+    color: #fff;
+    text-transform: capitalize;
+  }
+  .l-column-sec {
+    margin-top: 74px;
+  }
+  .down-footer {
+    display: inline-block;
+    width: 100%;
+    padding: 25px 0;
+    position: relative;
+    border-top: 1px solid $color-footer-link;;
+    .copiright {
+      float: left;
+      color: $color-footer-link;
+    }
+    .sec-copiright {
+      position: absolute;
+      right: 0;
+      top: 25px;
+      color: $color-footer-link;
+      font-size: 14px;
+      .dev-by {
+        font-size: 16px;
+        font-weight: 700;
+      }
+    }
 
+  }
+  .social-wrapper {
+    padding: 45px 0;
+    .phone-container {
+      margin-bottom: 50px;
+      .phone-number {
+        color: #fff;
+        font-size: $font-size-middle-title;
+      }
+      p {
+        margin: 20px 0 0;
+        font-size: 12px;
+        color: $color-footer-link;
+      }
+    }
+    .social-container {
+      max-width: 220px;
+      ul {
+        margin-top: 15px;
+      }
+      span {
+        color: $color-footer-link;
+        font-size: 14px;
+        font-family: prxima-nova;
+      }
+      li {
+        display: block;
+        height: 42px;
+        width: 42px;
+        margin: 0 10% 10% 0;
+        float: left;
+        a {
+          display: block;
+          height: 42px;
+          &:before {
+            content: "";
+            display: block;
+            height: 42px;
+            width: 42px;
+          }
+        }
+        .facebook:before {
+          background: url($fb-ico-image) $fb-ico-offset-x $fb-ico-offset-y;
+          height: $fb-ico-height;
+          width: $fb-ico-width;
+        }
+        .g-plus:before {
+          background: url($gp-ico-image) $gp-ico-offset-x $gp-ico-offset-y;
+          height: $gp-ico-height;
+          width: $gp-ico-width;
+        }
+        .tweeter:before {
+          background: url($tw-ico-image) $tw-ico-offset-x $tw-ico-offset-y;
+          height: $tw-ico-height;
+          width: $tw-ico-width;
+        }
+        .youtube:before {
+          background: url($you-ico-image) $you-ico-offset-x $you-ico-offset-y;
+          height: $you-ico-height;
+          width: $you-ico-width;
+        }
+        .vk:before {
+          background: url($vk-ico-image) $vk-ico-offset-x $vk-ico-offset-y;
+          height: $vk-ico-height;
+          width: $vk-ico-width;
+        }
+        .instagram:before {
+          background: url($inst-ico-image) $inst-ico-offset-x $fb-ico-offset-y;
+          height: $inst-ico-height;
+          width: $inst-ico-width;
+        }
+      }
+    }
+  }
 }

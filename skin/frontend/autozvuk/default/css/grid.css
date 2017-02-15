@@ -1,5 +1,17 @@
- 	html {
-  font-family: sans-serif;
+@font-face {
+  font-family: prxima-nova;
+  src: url(../fonts/Proxima-Nova-Regular.otf);  /* check this */
+}
+@font-face {
+  font-family: prxima-nova-bold;
+  src: url(../fonts/Proxima-Nova-Bold.otf);  /* check this */
+}
+@font-face {
+  font-family: prxima-light;
+  src: url(../fonts/Proxima-Nova-Light.otf);  /* check this */
+}
+html {
+  font-family: prxima-nova;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -84,6 +96,7 @@ img {
   padding-right: 15px;
   width: 100%;
   max-width: 1290px;
+  position: relative;
 }
 .container-fluid {
   margin-right: auto;

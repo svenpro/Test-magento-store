@@ -60,6 +60,9 @@ ul {
 		    border-left: 1px solid $color-light-gray-3;
 		}
 	}
+	.form-language a:first-child {
+		border-bottom: 2px solid $color-red-main;
+	}
 	.autorization {
 		text-align: right;
 		a {

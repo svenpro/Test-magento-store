@@ -44,15 +44,15 @@
                 </p>
             </div>
             <div class="product-info-wrapper">
-                <span class='available-prod pull-left'>В наличии</span>
+                <span class='available-prod pull-left'><?php echo $this->__('In stock') ?></span>
             </div>
             <span class="main-price"><?php echo $this->getPriceHtml($_item, true, '-related') ?></span>
-            <button class="buy-btn pull-left">Купить</button>
+            <button class="buy-btn pull-left"><?php echo $this->__('Buy') ?></button>
             <a href="#" class="compare">.</a>
             <div class="statistic-wrapper">
                 <span><img src="images/stars.png" alt="stars"></span>
                 <div class="comments stat-item">
-                    <a href="#">3 отзыва</a>
+                    <a href="#"><?php echo $this->__('3 review') ?></a>
                 </div>
             </div>
         </li>

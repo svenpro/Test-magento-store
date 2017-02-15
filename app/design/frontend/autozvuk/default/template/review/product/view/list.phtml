@@ -28,8 +28,8 @@
 <?php $_items = $this->getReviewsCollection()->getItems();?>
 <section class="reviewes">
     <div class="top-buttons-wrapper">
-        <button class="red-btn main-btn pull-left">Отзывы (10)</button>
-        <button class="yelow-btn main-btn pull-right">Оставить отзыв</button>
+        <button class="red-btn main-btn pull-left"><?php echo $this->__('Review (10)'); ?></button>
+        <button class="yelow-btn main-btn pull-right"><?php echo $this->__('Add Review'); ?></button>
     </div>
 
         <?php if (count($_items)):?>
@@ -41,17 +41,17 @@
                         <a class="name" href="<?php echo $this->getReviewUrl($_review->getId()) ?>"><?php echo $this->__($this->escapeHtml($_review->getNickname())) ?></a>
                         <small class="when"><?php echo $this->__($this->formatDate($_review->getCreatedAt()), 'long') ?></small>
                         <p class="comment"><?php echo nl2br($this->escapeHtml($_review->getDetail())) ?></p>
-                        <a href="#" class="more-link">Читать полностью</a>
-                        <p class="goods"><span class="green-text">Достоинства: </span>хорошая батарея, и вообще неплохой смартфон</p>
-                        <p class="bad"><span class="red-text">Недостатки: </span>не обнаружены</p>
+                        <a href="#" class="more-link"><?php echo $this->__('Read more'); ?></a>
+                        <p class="goods"><span class="green-text"><?php echo $this->__('Dignity'); ?></span>хорошая батарея, и вообще неплохой смартфон</p>
+                        <p class="bad"><span class="red-text"><?php echo $this->__('Limitations'); ?> </span>не обнаружены</p>
                         <div class="bottom-buttons-wrapper">
-                            <a href="#" class="reviews-link">1 ответ</a>
-                            <a href="#" class="do-reviews">Ответить</a>
+                            <a href="#" class="reviews-link"><?php echo $this->__('1 Review'); ?></a>
+                            <a href="#" class="do-reviews"><?php echo $this->__('Add review'); ?></a>
                         </div>
                         <div class="like-it">
                             <a href="#" class="dislike">5</a>
                             <a href="#" class="like">12</a>
-                            <p>Был ли вам полезен этот отзыв:</p>
+                            <p><?php echo $this->__('Was this review helpful to you:'); ?></p>
                         </div>
                     </div>
                     <dl class="right-comment-side">
